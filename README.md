@@ -1,4 +1,4 @@
-Shutdown module for gladysproject
+Sysadmin module for gladysproject
 =======================
 
 
@@ -12,7 +12,7 @@ What is Gladys project
 The Module
 -------------
 
-This module add the possibility to Gladys to shutdown and reboot itself, by sending a system command to the OS.
+This module add the possibility to Gladys to upgrade itself, by sending a system command to the OS.
 
 Prerequisites
 -------------
@@ -28,31 +28,19 @@ Add followings parameters in gladys :
 
 For my raspberry I use following parameters but you can change them :
 ```
-SHUTDOWN_CMD=sudo shutdown
+UPGRADE_CMD=ssh -i /home/pi/.ssh/gladys_rsa pi@192.168.0.211 'sudo apt upgrade -y'
 ```
-
-```
-REBOOT_CMD=sudo reboot
-```
-
 
 #### Install the module on gladys
 
-Nom : shutdown 
-Version : 0.0.2 
-URL git : https://github.com/TanguyNa/gladys-shutdown
-slug : shutdown
+Nom : sysadmin 
+Version : 0.0.1 
+URL git : https://github.com/totof68/gladys-sysadmin
+slug : sysadmin
 
 
 #### Restart Gladys
 
 #### Sentences are automatically added by the hook as you can see in the brain :
-In french language : Eteinds-toi / Redémarre
-In other languages : Shutdown / Reboot
+In french language : Met à jour le serveur
 
-####
-
-Links
--------------
-
-- [Twitter](https://twitter.com/TanguyNa)
